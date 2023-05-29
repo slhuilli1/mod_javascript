@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0.0" client="site" method="upgrade">
+<name>Module d'intégration de bibliothèque javascript</name>
+<author>sebastien lhuillier</author>
+<version>1.0.0</version>
+<description>Module d'intégration de bibliothèque javascript.</description>
+	<files>
+		<filename>mod_javascript.xml</filename>
+		<filename module = "mod_javascript">mod_javascript.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+	</files>
+	   <config>
+
+        <fieldset>
+            <fields name="params">   
+				<fieldset name="basic">	
+				<field name="label4" type="note" class="alert" label="Déboggage" description="Comme ce module ne retourne rien, en cochant cette case, vous découvrirez un texte spécifiant que le module est bien pris en compte" />
+				
+				<field name="debogage" type="checkbox" label="Débogage" description="Afficher dans le module le fait qu'il soit bien pris en compte" value="1" />
+				<field name="label1" type="note" class="alert alert-info" label="Notes" description="Cet outil permet de définir les éléments à charger, en fonction des condition de l'onglet Affectations. Il suffit de définir autant de module que de conditions pour charger telle ou telle bibliothèque" />
+				<field name="label2" type="note" class="alert" label="Bibliothèques javascript" description="Veuillez saisir ici l'ensemble des bibliothèques javascripts à intégrer dans votre module (ils doivent être présent sur le serveur) en débutant par ./ pour le chemin d'accès" />
+				<field name= "javascript"
+						 description= "Javascript"
+						 type= "subform"
+						 label= "Vos scripts Javascripts"
+						 min= "1"
+						 max= "12"
+						 required= "true"            
+						 formsource= "modules/mod_javascript/subformjavascript.xml"
+						 multiple= "true"
+						 buttons= "add,remove,move"
+						 layout="joomla.form.field.subform.repeatable-table"
+						 groupByFieldset="false"/>
+				<field name="labe3" type="note" class="alert" label="Bibliothèques CSS" description="Veuillez saisir ici l'ensemble des bibliothèques ou fichiers CSS à intégrer dans votre module (ils doivent être présent sur le serveur) en débutant par ./ pour le chemin d'accès" />
+				<field name= "css"
+						 description= "css"
+						 type= "subform"
+						 label= "Vos fichiers CSS"
+						 min= "1"
+						 max= "12"
+						 required= "true"            
+						 formsource= "modules/mod_javascript/subformcss.xml"
+						 multiple= "true"
+						 buttons= "add,remove,move"
+						 layout="joomla.form.field.subform.repeatable-table"
+						 groupByFieldset="false"/>
+				</fieldset>
+
+								
+			</fields>
+		</fieldset>
+    </config>
+</extension>
+
+

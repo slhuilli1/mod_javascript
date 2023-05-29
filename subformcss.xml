@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+      <field name="library_css_name" type="text" label="Nom (libre) de la bibliothèque" description="Ce nom a un rôle d'aide mémoire pour savoir quelle est la bibliothèque utilisé. (Ex. JQuery 1.0.21b )" />
+      <field name="library_css_url" type="text" label="Chemin (relatif depuis le répertoire [joomla] du fichier, débutez par ./ ou une URL pour des bib. externes (CDN)" description="Chemin (relatif depuis le répertoire [joomla] du fichier, débutez par ./ du chemin du fichier ou une URL pour des bib. externes (CDN)"  accept="*.css"/>
+</form>
